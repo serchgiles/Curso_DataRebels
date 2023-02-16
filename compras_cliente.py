@@ -23,4 +23,9 @@ while x > 0:
 	x = float(x)
 	montos = np.append(montos,[x])
 
-print("La suma de los montos es %s" % round(montos.sum(),2))
+suma = montos.sum()
+if suma >=1000:
+	print("El monto es mayor a $1000. Recibes un descuento del 10%")
+	suma = suma*0.9
+
+print("El precio total a pagar es: $ %s" % round(suma,2))
